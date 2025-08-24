@@ -77,10 +77,10 @@ export const createExtraOptionList = () => {
   });
 
   const peneList = [
-    { mainItemIdx: 0, label: 'เจาะกาย Race', prefixProp: 'p_pene_race_', properties: atkProps.Race },
-    { mainItemIdx: 0, label: 'เจาะกาย Class', prefixProp: 'p_pene_class_', properties: atkProps.Class },
-    { mainItemIdx: 1, label: 'เจาะเวท Race', prefixProp: 'm_pene_race_', properties: atkProps.Race },
-    { mainItemIdx: 1, label: 'เจาะเวท Class', prefixProp: 'm_pene_class_', properties: atkProps.Class },
+    { mainItemIdx: 0, label: 'Physical Pen Race', prefixProp: 'p_pene_race_', properties: atkProps.Race },
+    { mainItemIdx: 0, label: 'Physical Pen Class', prefixProp: 'p_pene_class_', properties: atkProps.Class },
+    { mainItemIdx: 1, label: 'Magic Pen Race', prefixProp: 'm_pene_race_', properties: atkProps.Race },
+    { mainItemIdx: 1, label: 'Magic Pen Class', prefixProp: 'm_pene_class_', properties: atkProps.Class },
   ] as {
     mainItemIdx: number;
     label: string;
@@ -92,7 +92,7 @@ export const createExtraOptionList = () => {
     const scale = 1;
     const rawMin = 1;
     const rawMax = 100;
-    const pre = mainItemIdx === 0 ? 'เจาะกาย' : 'เจาะเวท';
+    const pre = mainItemIdx === 0 ? 'Physical Pen' : 'Magic Pen';
 
     const children = [];
     for (const prop of properties) {

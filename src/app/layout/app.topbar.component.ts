@@ -48,17 +48,17 @@ export class AppTopBarComponent implements OnInit, OnDestroy {
   env = environment;
 
   infos = [
-    'ข้อมูลไอเทม มอนสเตอร์ และสกิล ทั้งหมดมาจากเว็บ "divine-pride"',
-    'เปลี่ยน Theme ทึ่ปุ่ม Config ตรงขวากลาง',
-    'ข้อมูลที่บันทึกไว้จะถูกเก็บไว้ที่ browser, ถ้าล้างข้อมูล browser ก็จะถูกลบไปด้วย',
-    'เงื่อนไขที่เขียนไว้ว่า "ทุกๆการเรียนรู้สกิล" ต้องกดอัพในช่อง "Learn to get bonuses" ถึงจะได้ bonus, ถ้าไม่มีให้อัพจะให้เป็น bonus เป็น Lv MAX',
-    'options ในแถวอาวุธจะอยู่ตลอด สามารถใช้เป็น What if ได้',
-    'My Magical Element ใน options = เพิ่ม Damage ทางเวทมนตร์ธาตุ ...',
-    'การเปรียบเทียบอาวุธ 2 มือยังไม่รองรับการเปลี่ยนมือซ้าย',
-    'Job 61-64, 66-69 จะได้ Bonus ไม่ตรงเพราะไม่มีข้อมูล',
-    'Tab "Summary" คือ ใส่อะไรบ้าง/อัพสกิลอะไรบ้าง/การคำนวนทั้งหมด',
-    'Tab "Equipments Summary" คือ bonus ของไอเทมแบบภาพรวม',
-    'Tab "Item Descriptions" คือ bonus ของไอเทมแต่ละชิ้นและคำอธิบาย (เอาไว้ตรวจสอบว่าได้ bonus ถูกไหม)',
+    'All item, monster, and skill data comes from the "divine-pride" website',
+    'Change theme using the Config button on the center right',
+    'Saved data is stored in the browser. If you clear browser data, it will be deleted',
+    'For conditions stating "every skill learning", you must click upgrade in the "Learn to get bonuses" section to get the bonus. If there\'s none to upgrade, it defaults to Lv MAX bonus',
+    'Options in the weapon row persist and can be used for "What if" scenarios',
+    'My Magical Element in options = increases elemental magic damage...',
+    'Two-handed weapon comparison does not yet support changing the left hand',
+    'Job levels 61-64, 66-69 will have inaccurate bonuses due to missing data',
+    'Tab "Summary" shows what you equipped/which skills you upgraded/all calculations',
+    'Tab "Equipments Summary" shows item bonuses overview',
+    'Tab "Item Descriptions" shows individual item bonuses and descriptions (for checking if bonuses are correct)',
   ];
 
   references: { label: string; link: string; writer: string; date?: string; }[] = [
@@ -158,17 +158,17 @@ export class AppTopBarComponent implements OnInit, OnDestroy {
       link: 'https://www.divine-pride.net/forum/index.php?/topic/4319-kro-illusion-of-under-water',
     },
     {
-      label: 'RO Podcast EP 7 : ส่อง KRO patchnote Q4 + คุยเรื่อง debuff',
+      label: 'RO Podcast EP 7 : KRO patchnote Q4 review + debuff discussion',
       writer: 'Sigma the fallen',
       link: 'https://www.youtube.com/live/xUiYYi6o6gA?si=EdJvXnchwtionL_4&t=1515',
     },
     {
-      label: 'สกิล Class 4 V2',
+      label: 'Class 4 Skills V2',
       writer: 'Sigma the fallen',
       link: 'https://sigmathefallen.blogspot.com/',
     },
     {
-      label: 'เจาะลึก Stat ต่างๆ ใน Renewal Part I : Matk & Mdef',
+      label: 'Deep Dive into Renewal Stats Part I : Matk & Mdef',
       writer: 'Sigma the fallen',
       link: 'https://web.facebook.com/notes/3202008843255644/',
     },
@@ -178,12 +178,12 @@ export class AppTopBarComponent implements OnInit, OnDestroy {
       link: 'https://hazyforest.com/equipment:enchantment_system',
     },
     {
-      label: 'Enchant Deadly Poison หรือที่เรียกติดปากกันว่า EDP',
+      label: 'Enchant Deadly Poison (EDP) Guide',
       writer: 'Assing',
       link: 'https://www.pingbooster.com/th/blog/detail/ragnarok-online-edp-enchant-deadly-poison-assassin',
     },
     {
-      label: 'คุณสมบัติลับยาแอส ทำยังไงให้ตีแรงที่สุด (โปรดเปิดคำบรรยายเพื่อข้อมูลที่ครบถ้วน)',
+      label: 'Assassin Secret Properties - How to Hit the Hardest (Enable captions for complete info)',
       writer: '/\\ssing (แอสซิ่ง)',
       link: 'https://youtu.be/WvSbULJ2CGU?si=Ae5vY9teaGZDXSRB',
     },
@@ -447,7 +447,7 @@ export class AppTopBarComponent implements OnInit, OnDestroy {
       date: '23-09-2567',
       logs: [
         'Added Night Watch skills',
-        'Updated base HP/SP (ขอบคุณข้อมูลจากปู่Sigma)',
+        'Updated base HP/SP (Thanks to data from Grandpa Sigma)',
         'Added item series (OSAD, Dim Glacier, Vivatus)',
         'Added requested items',
         'Fixed reported bugs'
@@ -480,7 +480,7 @@ export class AppTopBarComponent implements OnInit, OnDestroy {
     {
       v: 'V2.3.0',
       date: '29-07-2567',
-      logs: ['Fixed reported bugs', 'Added feature Elemental table (ปุ่มแว่นขยายใน Battle summary)', 'Supported costume enchant comparing'],
+      logs: ['Fixed reported bugs', 'Added feature Elemental table (magnifying glass button in Battle summary)', 'Supported costume enchant comparing'],
     },
     {
       v: 'V2.2.4',
@@ -614,7 +614,7 @@ export class AppTopBarComponent implements OnInit, OnDestroy {
     {
       v: 'V2.0.2',
       date: '11-03-2567',
-      logs: ['Added "คลิปวิธีใช้งานเว็บ"', 'Enable Shadow equipment comparing', 'Added requested items & monsters'],
+      logs: ['Added "How to use website video"', 'Enable Shadow equipment comparing', 'Added requested items & monsters'],
     },
     {
       v: 'V2.0.1',
@@ -695,7 +695,7 @@ export class AppTopBarComponent implements OnInit, OnDestroy {
       logs: [
         'Fixed reported bugs',
         'Supported Super Novice class',
-        'Added SC, Git-Cross learnable skill (Hiding ***กดอัพสกิลใหม่นะครับ ลำดับสกิลมันเปลี่ยน)',
+        'Added SC, Git-Cross learnable skill (Hiding ***Please upgrade skills again as skill order has changed)',
         'Added Penetration summary table (next to "Skill bonus / Multiplier Summary")',
         'Added requested items',
       ],
@@ -822,7 +822,7 @@ export class AppTopBarComponent implements OnInit, OnDestroy {
       date: '22-11-2566',
       logs: [
         'Fixed reported bugs',
-        'Fixed items cannot choose option (Reporter: "แก้สักทีนะ ตูแจ้งไปเป็นชาติแล้ววว")',
+        'Fixed items cannot choose option (Reporter: "Please fix this, I\'ve been reporting this forever!")',
         'Display diff percentage when compare item',
         'Added Guillotine Cross skill ([Improved] Cross Impact)',
         'Added requested items',
